@@ -5,7 +5,7 @@ A Chrome plugin that adds a tab to the debugger. The tab shows various informati
 
 Targeted Features
 =================
-
+- Port the existing Client Metrics Tree scriptlet to a tab.
 - Show messages published with MessageBus.publish().
 - Show subscribers to messages.
 - Lists applications and modules on a page.

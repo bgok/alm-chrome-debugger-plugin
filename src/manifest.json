@@ -4,8 +4,9 @@
   "version": "0.1",
   "manifest_version": 2,
   "devtools_page": "debugger.html",
+  "options_page": "ClientMetricsTree/panel.html",
   "minimum_chrome_version": "18",
   "permissions": [
-    "http://api.flickr.com/"
+    "tabs", "*://*/*"
   ]
 }

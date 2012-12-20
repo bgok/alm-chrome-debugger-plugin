@@ -5,7 +5,6 @@
 console.log("injecting interceptor");
 
 (function() {
-	debugger;
 	function intercept(parent, method, interceptor) {
 		if (!!parent && !!parent[method]) {
 			var original = parent[method];	

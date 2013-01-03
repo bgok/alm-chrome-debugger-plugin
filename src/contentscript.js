@@ -38,7 +38,7 @@
 		    	scope: this
 		   	});
 		}
-	}
+	};
 
 
 	var script = document.createElement('script');
@@ -52,8 +52,7 @@ window.addEventListener("message", function(event) {
 		return;
 
     if (event.data.type && (event.data.type == "CLIENT_METRICS_EVENT")) {
-		//console.log(event.data.evt);
-		chrome.extension.sendMessage(null, event.data.evt);
+		chrome.extension.sendMessage(null, event.data);
     }
 }, false);
 

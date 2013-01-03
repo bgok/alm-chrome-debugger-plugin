@@ -7,7 +7,7 @@
   "options_page": "ClientMetricsTree/panel.html",
   "minimum_chrome_version": "18",
   "permissions": [
-    "tabs", "*://*/*"
+    "tabs", "http://*/*", "https://*/*"
   ],
   "content_scripts": [{
       "matches": ["https://rally1.rallydev.com/*"],

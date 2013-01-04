@@ -1,5 +1,5 @@
 chrome.devtools.panels.create(
-    "Client Metrics Tree",
+    "Client Metrics",
     'icons/rally-24-24.png',
     'ClientMetricsTree/panel.html',
     function(panel){
@@ -7,7 +7,6 @@ chrome.devtools.panels.create(
 
         panel.onShown.addListener(function(win) {
             _log = win.log;
-            _log("Shown");
 
             _port = chrome.extension.connect({
                 name: "ClientMetricsTree"
@@ -15,14 +14,14 @@ chrome.devtools.panels.create(
 
             _port.onMessage.addListener(function(message, sender, responder) {
                 if (message.type === "CLIENT_METRICS_EVENT") {
-                    _log(message.evt.cmpH);
+                    console.log(message.evt);
+                    _log(message.evt);
                 }
             });
 
         });
 
         panel.onHidden.addListener(function() {
-            _log("Hidden");
             _port.disconnect();
             _port = undefined;
             _log = undefined;

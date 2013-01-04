@@ -2,14 +2,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style>
-	</style>
+    <link rel="stylesheet" href="panel.css">
     <script src="../lib/zepto.js"></script>
     <script src="../lib/underscore.js"></script>
 	<script src="panel.js"></script>
 </head>
 <body>
-	<div>Hello Chrome Developer!</div>
-	<div id="log"></div>
+    <div class="data-grid">
+        <table class="header">
+            <thead>
+                <tr>
+                    <th class="description-column">Description</th>
+                    <th class="status-column">Status</th>
+                    <th class="elapsed-column">Elapsed</th>
+                    <th class="event-id-column">Event ID</th>
+                    <th class="parent-id-column">Parent ID</th>
+                    <th class="trace-id-column">Trace ID</th>
+                    <th class="bts-column">BTS</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="data-container">
+            <table class="data">
+                <tbody id="event-log"></tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

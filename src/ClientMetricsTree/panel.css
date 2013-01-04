@@ -1,0 +1,88 @@
+.data-grid {
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 11px;
+    width: 100%;
+    height: 100%;
+    border-right: 0 none transparent;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+.data-grid table {
+    line-height: 120%;
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 10px;
+    font-family: Lucida Grande, sans-serif;
+}
+.data-grid th {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ECECEC), to(#D9D9D9));
+    border-bottom: 1px solid #A3A3A3;
+    height: 30px;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: left;
+    border-right: 1px solid #B3B3B3;
+    vertical-align: middle;
+    padding: 0 4px;
+    white-space: nowrap;
+}
+.data-grid td > div, .data-grid th {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.data-grid .data-container {
+    position: absolute;
+    top: 31px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: overlay;
+}
+.data-grid table.data {
+    -webkit-background-size: 1px 82px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.05)));
+    font-size: 11px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 0 none transparent;
+    table-layout: fixed;
+}
+.data-grid td {
+    vertical-align: middle;
+    height: 37px;
+    line-height: 17px;
+    padding: 2px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid #D2D2D2;
+    -webkit-user-select: text;
+}
+.data-grid .description-column {
+    width: 16%;
+}
+.data-grid .status-column {
+    width: 6%;
+}
+.data-grid .elapsed-column {
+    width: 5%;
+}
+.data-grid .event-id-column, .data-grid .parent-id-column, .data-grid .trace-id-column {
+    width: 21%;
+}
+.data-grid .bts-column {
+    width: 10%;
+}

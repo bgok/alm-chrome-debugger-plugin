@@ -10,6 +10,7 @@
             if (port) {
                 port.postMessage(message);
             } else {
+                //TODO Periodically clear the buffer so that it doesn't get ginormous when the panel isn't active.
                 buffer.push(message);
             }
         }
@@ -17,8 +18,13 @@
     chrome.extension.onConnect.addListener(function(p){
         console.log("connected to background.js");
         console.log(p);
-        if (!port)
+        //FIXME This doesn't work very well. Needs a better approach to managing open ports.
+        if (!port) {
             port = p;
-        // check for messages in the buffer
+        }
+        _.each(buffer, function(msg) {
+            port.postMessage(msg);
+        });
+        buffer = [];
     });
 })();

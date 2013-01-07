@@ -71,6 +71,9 @@
     border-right: 1px solid #D2D2D2;
     -webkit-user-select: text;
 }
+.data-grid table.data tr:hover {
+    background-color: #FFFACD;
+}
 .data-grid .description-column {
     width: 16%;
 }

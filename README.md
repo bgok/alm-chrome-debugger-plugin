@@ -13,7 +13,7 @@ Targeted Features
 
 Installation
 ============
-1. Fork this repository to the localhost where you run Chrome.
+1. Clone this repository to the localhost where you run Chrome.
 2. In Chrome, load the extension manager (chrome://chrome/extensions/).
 3. Check the developer mode checkbox.
 4. Click "Load unpacked extension...". Navigate to the local git repository.
